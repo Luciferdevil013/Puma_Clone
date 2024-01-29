@@ -1,0 +1,613 @@
+@font-face {
+    font-family: 'normal';
+    src: url(./Fonts/FFDINforPumaW01-Regular-3a6014ee0678a1270df6647cb746e8ee.woff2);
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url(/Fonts/FFDINforPumaW01-Bold-4115824c48e3f64249e9f39988315c93.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    position: relative;
+    background-color: #AABDBB;
+    /* overflow: hidden; */
+}
+
+#page{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+#animated-word{
+    width: 100%;
+    top: 50%;
+    left: 0%;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+}
+
+#latter{
+    text-align: center;
+}
+
+#latter h1{
+    font-family: bold;
+    font-size: 10vw;
+    font-weight: bold;
+    -webkit-text-stroke: 3px #E8F691;
+    color: transparent;
+    line-height: 0;
+}
+
+canvas{
+    max-width: 100vw;
+    max-height: 100vh;
+    position: fixed;
+}
+
+#page1{
+    width: 100vw;
+    position: relative;
+}
+
+#part1{
+    width: 100%;
+    height: 50vh;
+}
+
+
+#page1-left-small1{
+    width: 50%;
+    height: 10vh;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.normalheading{
+    text-align: right;
+    font-family: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.colorspan{
+    color: #E5F488;
+}
+
+#page1-left-small2{
+    width: 50%;
+    height: 10vh;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+#page2{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page2-left{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 3vw;
+}
+
+#page2-left h1{
+    width: 70%;
+    font-family: normal;
+    font-size: 27px;
+    font-weight: 500;
+    color: #fff;
+    word-spacing: 5px;
+}
+
+#page2-right{
+    width: 50%;
+    height: 100vh;
+    background-image: url('./site-images/running.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+#page2-center{
+    position: absolute;
+    z-index: 10;
+    width: 25%;
+    height: 80vh;
+    left: 40%;
+    background-image: url('./site-images/shoes.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+#page3{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#page3-text{
+    top: 0%;
+    left: 5%;
+    position: absolute;
+    width: 40%;
+    height: fit-content;
+    z-index: 10;
+    text-align: left;
+    overflow: hidden;
+}
+
+#page3 h1{
+    font-family: normal;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#page3-text2{
+    top: 30%;
+    left: 5%;
+    position: absolute;
+    width: 40%;
+    height: fit-content;
+    z-index: 10;
+    text-align: left;
+    overflow: hidden;
+}
+
+#page4{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#page4 h1{
+    font-family: normal;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#page4-text{
+    top: 0%;
+    left: 5%;
+    position: absolute;
+    width: 50%;
+    height: fit-content;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#page4-bottom{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#page4-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4vw;
+}
+#page4-left h1{
+    font-size: 28px;
+}
+
+#page4-right{
+    width: 50%;
+    height: 100%;
+    background-image: url('./site-images/men.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+#page4-center{
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    width: 20%;
+    height: 70%;
+    background-image: url('./site-images/shoes2.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+#page5{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#page5-text{
+    position: absolute;
+    bottom: 50%;
+    left: 5%;
+    width: 40%;
+    height: fit-content;
+    overflow: hidden;
+}
+#page5 h1{
+    font-family: normal;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#page6{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#page6-text{
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 40%;
+    height: fit-content;
+    overflow: hidden;
+}
+#page6 h1{
+    font-family: normal;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#page7{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#page7-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4vw;
+}
+#page7-left h1{
+    font-family: normal;
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#page7-right{
+    width: 50%;
+    height: 100%;
+    background-image: url('./site-images/ties.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+#page7-center{
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    width: 20%;
+    height: 70%;
+    background-image: url('./site-images/front.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+#page8{
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+}
+
+#page8-text {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    width: 40%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+#page8 h1{
+    font-family: normal;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#page9{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+#product{
+    width: 80%;
+    height: 80%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+}
+
+#product-image{
+    flex: 1;
+}
+
+#product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#product-details{
+    width: 25%;
+    height: 100%;
+    padding: 10vh 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#product-details h1{
+    color: black;
+    font-family: 'normal';
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#product-details h4{
+    color: black;
+    font-family: 'normal';
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#product-details button{
+    color: #fff;
+    background-color: #AE946D;
+    font-family: 'normal';
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#page10{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3vw;
+    background-color: #16665e;
+}
+
+
+
+#image1{
+    display: flex;
+    flex-shrink: 0;
+    width:100vw;
+    height:100%;
+    background-image: url('./site-images/sit.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+#image1 h1{
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    font-family: normal;
+    font-size: 13.7vw;
+    font-weight: 700;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+#image2{
+    display: flex;
+    flex-shrink: 0;
+    width: 350px;
+    height:80%;
+    background-image: url('https://res.cloudinary.com/hdsdev/image/upload/c_scale,f_auto,g_center,h_1080,q_70/v1/smooth-webspecial/assets/apparel/22SS_RT_Run-Puma_Velocity-Nitro-2-Fizzy-Light-Nitro-Blue_Q1_0858');
+    background-size: cover;
+    background-position: center;
+}
+#image3{
+    display: flex;
+    flex-shrink: 0;
+    width: 60vw;
+    height:80%;
+    background-image: url('https://res.cloudinary.com/hdsdev/image/upload/c_scale,f_auto,g_center,h_1080,q_70/v1/smooth-webspecial/assets/apparel/22SS_RT_Run-Puma_Velocity-Nitro-2_Group-Shot-2_Q1_0478');
+    background-size: cover;
+    background-position: center;
+}
+
+#image4{
+    display: flex;
+    flex-shrink: 0;
+    width: 350px;
+    height:80%;
+    background-image: url('https://res.cloudinary.com/hdsdev/image/upload/c_scale,f_auto,g_center,h_1080,q_70/v1/smooth-webspecial/assets/apparel/22SS_RT_Velocity2_466_RGB');
+    background-size: cover;
+    background-position: center;
+}
+#image5{
+    display: flex;
+    flex-shrink: 0;
+    width: 350px;
+    height:80%;
+    background-image: url('https://res.cloudinary.com/hdsdev/image/upload/c_scale,f_auto,g_center,h_1080,q_70/v1/smooth-webspecial/assets/apparel/22SS_RT_Run-Puma_Velocity-Nitro-2-Fizzy-Light-Nitro-Blue_Q1_0365');
+    background-size: cover;
+    background-position: center;
+}
+#image6{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 100vw;
+    height:100vh;
+    background-image: url('https://res.cloudinary.com/hdsdev/image/upload/c_fill,f_auto,g_center,h_1080,q_70,w_1920/v1/smooth-webspecial/assets/apparel/22SS_RT_Run-Puma_Velocity-Nitro-2-Wildwash-Harbor-Mist-Ocean-Dive_Q2_0474');
+    background-size: cover;
+    background-position: center;
+    padding: 20vh 7vw;
+    gap: 30px;
+}
+
+#image6 h1{
+    font-family: normal;
+    font-size:  3.7vw;
+    font-weight: 700;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#image6 h4{
+    width: 70%;
+    font-family: normal;
+    font-size: 1.7vw;
+    font-weight: 700;
+    color: #fff;
+    word-spacing: 5px;
+    text-transform: uppercase;
+
+}
+#image6 button{
+    width: 250px;
+    height: 50px;
+    font-family: normal;
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #E1F371;
+    border: none;
+    outline: none;
+    color: #1A1A1A;
+    cursor: pointer;
+}
+
+#page11{
+    width: 100vw;
+    height: 100vh;
+    padding: 0 3vw;
+    display: flex;
+    position: relative;
+    gap: 30px;
+    background-color: #fff;
+}
+
+#page11 #left{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    height: 100%;
+    padding: 10vh 0;
+}
+
+#page11 #left #t{
+    font-family: normal;
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+#page11 #left h4{
+    font-family: normal;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#selct h1{
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    padding: 10px 3px;
+    text-transform: uppercase;
+}
+#page11 #right{
+    flex: 1;
+}
+
+#page11 #right img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
