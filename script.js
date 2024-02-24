@@ -948,7 +948,7 @@ gsap.to(imageSeq, {
   snap: "frame",
   ease: `none`,
   scrollTrigger: {
-    scrub: 0.15,
+    scrub: 5,
     trigger: `#page>canvas`,
     start: `top top`,
     // endTrigger:'#page9',
@@ -1365,3 +1365,16 @@ function page10(){
 }
 
 page10();
+
+
+document.addEventListener('DOMContentLoaded',() =>{
+  setTimeout(() => {
+    upword();
+    }, 10000);
+    function upword(){
+      document.querySelector('#main').style.height = 'auto';
+      gsap.to('.loader',{
+        y:'-100%',
+      })
+    }
+})
