@@ -1367,14 +1367,9 @@ function page10(){
 page10();
 
 
-document.addEventListener('DOMContentLoaded',() =>{
-  setTimeout(() => {
-    upword();
-    }, 10000);
-    function upword(){
-      document.querySelector('#main').style.height = 'auto';
-      gsap.to('.loader',{
-        y:'-100%',
-      })
-    }
-})
+window.addEventListener("load", function(){
+    document.querySelector('#main').style.height = 'auto';
+          gsap.to('.loader',{
+            y:'-100%',
+          })
+  })
